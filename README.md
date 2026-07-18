@@ -84,7 +84,7 @@ This project was developed to strengthen backend development skills and demonstr
 The application follows a layered architecture to ensure scalability, maintainability, and separation of concerns.
 
 <p align="center">
-    <img src="docs/system-architecture.png" width="900"/>
+    <img src="docs/SystemArchitecureDiagram.png" width="900"/>
 </p>
 
 ---
@@ -128,7 +128,7 @@ The application uses **MySQL** as the relational database.
 - Order Item
 
 <p align="center">
-    <img src="docs/er-diagram.png" width="900"/>
+    <img src="docs/ER Diagram.png" width="900"/>
 </p>
 
 ---
@@ -138,7 +138,7 @@ The application uses **MySQL** as the relational database.
 The application uses **JWT (JSON Web Token)** for stateless authentication.
 
 <p align="center">
-    <img src="docs/jwt-authentication.png" width="900"/>
+    <img src="docs/JwtArchitecturalDiagram.png" width="900"/>
 </p>
 
 ---
