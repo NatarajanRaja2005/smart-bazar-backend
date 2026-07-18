@@ -289,3 +289,11 @@ This project is licensed under the MIT License.
 <p align="center">
     <img src="docs/er-diagram.png" width="900"/>
 </p>
+
+# API Documentation
+
+The project includes interactive API documentation using Swagger OpenAPI.
+
+<p align="center">
+    <img src="docs/swagger-ui.png" width="900"/>
+</p>
