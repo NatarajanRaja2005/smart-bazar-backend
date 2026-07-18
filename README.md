@@ -1,61 +1,72 @@
-# Smart Bazar Backend
+#  Smart Bazar Backend
 
-Production-ready E-Commerce Backend built using Spring Boot, Spring Security, JWT Authentication, Hibernate, MySQL, and RESTful APIs.
+![Java](https://img.shields.io/badge/Java-21-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen)
+![Spring Security](https://img.shields.io/badge/Security-Spring%20Security-green)
+![JWT](https://img.shields.io/badge/Auth-JWT-blue)
+![MySQL](https://img.shields.io/badge/Database-MySQL-blue)
+![Swagger](https://img.shields.io/badge/API-Swagger-success)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+Production-ready E-Commerce Backend built using **Spring Boot**, **Spring Security**, **JWT Authentication**, **Hibernate**, **MySQL**, and **RESTful APIs**.
 
 ---
 
-## Project Overview
+#  Project Overview
 
 Smart Bazar Backend is a production-style e-commerce backend application developed using Spring Boot. It provides secure RESTful APIs for managing products, categories, shopping carts, orders, user authentication, and image uploads.
 
-The project follows a layered architecture using Controllers, Services, Repositories, and DTOs to ensure clean code, scalability, and maintainability. Authentication and authorization are implemented using Spring Security and JWT, while data persistence is handled using Spring Data JPA and MySQL.
+The project follows a layered architecture consisting of **Controllers**, **Services**, and **Repositories**, ensuring clean code, scalability, and maintainability. Authentication and authorization are implemented using **Spring Security** and **JWT**, while data persistence is handled using **Spring Data JPA** and **MySQL**.
 
 This project was developed to strengthen backend development skills and demonstrate real-world Spring Boot application development practices.
 
 ---
 
-## Features
+#  Features
 
-###  Authentication
+##  Authentication
+- User Registration
 - User Login
 - JWT Authentication
 - Role-Based Authorization (ADMIN & USER)
 
-###  Product Management
-- Create Product
+##  Product Management
+- Add Product
 - Update Product
 - Delete Product
-- Retrieve Products
+- View Products
+- Upload Product Images
 
-###  Category Management
-- Create Category
+##  Category Management
+- Add Category
 - Update Category
 - Delete Category
-- Retrieve Categories
+- View Categories
 
-###  Shopping Cart
-- Add Items to Cart
+##  Shopping Cart
+- Add Products to Cart
 - Update Quantity
-- Remove Items
+- Remove Cart Items
 - Clear Cart
 
-###  Order Management
+##  Order Management
 - Place Orders
 - View Order History
 - View Order Details
 
-###  Additional Features
-- Image Upload
-- Request Validation
+##  Additional Features
 - Global Exception Handling
+- Request Validation
+- Image Upload
 - Swagger API Documentation
+- RESTful API Design
 
 ---
 
-##  Technology Stack
+#  Technology Stack
 
-| Category | Technologies |
-|----------|--------------|
+| Category | Technology |
+|-----------|------------|
 | Language | Java 21 |
 | Framework | Spring Boot |
 | Security | Spring Security, JWT |
@@ -63,46 +74,24 @@ This project was developed to strengthen backend development skills and demonstr
 | Database | MySQL |
 | Build Tool | Maven |
 | API Documentation | Swagger / OpenAPI |
-| Testing | Postman |
+| API Testing | Postman |
 | Version Control | Git & GitHub |
 
-
 ---
 
-# System Architecture
+#  System Architecture
 
-The application follows a layered architecture to ensure separation of concerns, maintainability, and scalability.
+The application follows a layered architecture to ensure scalability, maintainability, and separation of concerns.
 
-                Client (Postman / Frontend)
-                          │
-                          ▼
-                 Spring Security Filter
-                          │
-                          ▼
-                   JWT Authentication
-                          │
-                          ▼
-                     REST Controllers
-                          │
-                          ▼
-                      Service Layer
-                          │
-                          ▼
-                    Repository Layer
-                          │
-                          ▼
-                         MySQL
+<p align="center">
+    <img src="docs/system-architecture.png" width="900"/>
+</p>
 
-
----
-
-#  Section 6 — Project Structure
-
-```md
 ---
 
 #  Project Structure
 
+```text
 src
 ├── controller
 ├── service
@@ -112,19 +101,14 @@ src
 ├── request
 ├── response
 ├── security
-│   ├── jwt
 │   ├── config
+│   ├── jwt
 │   └── user
 ├── exception
 ├── config
 └── SmartBazarApplication.java
+```
 
-
----
-
-# Section 7 — Database Design
-
-```md
 ---
 
 #  Database Design
@@ -137,103 +121,101 @@ The application uses **MySQL** as the relational database.
 - Role
 - Product
 - Category
+- Image
 - Cart
 - Cart Item
 - Order
 - Order Item
-- Image
 
-These entities are mapped using Spring Data JPA and Hibernate.
-
----
-
-# JWT Authentication Flow
-
-The application uses JWT (JSON Web Token) for stateless authentication.
-
-Authentication Flow:
-
-```text
-User Login
-      │
-      ▼
-AuthenticationManager
-      │
-      ▼
-UserDetailsService
-      │
-      ▼
-JWT Token Generated
-      │
-      ▼
-Returned to Client
-      │
-      ▼
-Client sends JWT in Authorization Header
-      │
-      ▼
-JWT Filter validates Token
-      │
-      ▼
-Protected API Access
-
+<p align="center">
+    <img src="docs/er-diagram.png" width="900"/>
+</p>
 
 ---
 
-#  Section 9 — API Documentation
+#  JWT Authentication Flow
 
-```md
+The application uses **JWT (JSON Web Token)** for stateless authentication.
+
+<p align="center">
+    <img src="docs/jwt-authentication.png" width="900"/>
+</p>
+
 ---
 
 #  API Documentation
 
-The project includes interactive API documentation using Swagger OpenAPI.
+The project includes interactive API documentation using **Swagger OpenAPI**.
 
 After starting the application, access Swagger UI at:
 
-#  Getting Started
-
-### Clone Repository
-
-```bash
-
+```
+http://localhost:8080/swagger-ui/index.html
 ```
 
-### Navigate
+<p align="center">
+    <img src="docs/swagger-ui.png" width="900"/>
+</p>
+
+---
+
+#  Getting Started
+
+## Clone Repository
+
+```bash
+git clone https://github.com/NatarajanRaja2005/smart-bazar-backend.git
+```
+
+## Navigate to Project
 
 ```bash
 cd smart-bazar-backend
 ```
 
-### Configure Database
+## Configure Database
 
-Update `application.properties`
+Update your `application.properties` file.
 
 ```properties
-spring.datasource.url=###
-spring.datasource.username=###
-spring.datasource.password=###
+spring.datasource.url=YOUR_DATABASE_URL
+spring.datasource.username=YOUR_DATABASE_USERNAME
+spring.datasource.password=YOUR_DATABASE_PASSWORD
 
-jwt.secret=
+jwt.secret=YOUR_SECRET_KEY
 ```
 
-### Build
+## Build the Project
 
 ```bash
 mvn clean install
 ```
 
-### Run
+## Run the Application
 
 ```bash
 mvn spring-boot:run
 ```
 
-Application starts on:
+Application starts at:
 
-```text
+```
 http://localhost:8080
 ```
+
+Swagger UI:
+
+```
+http://localhost:8080/swagger-ui/index.html
+```
+
+---
+
+#  API Testing
+
+All REST APIs have been tested using **Postman**.
+
+The project also includes **Swagger UI** for interactive API testing.
 
 ---
 
@@ -244,11 +226,12 @@ http://localhost:8080
 - Coupon System
 - Payment Gateway Integration
 - Email Notifications
-- Product Reviews
+- Product Reviews & Ratings
 - Inventory Management
 - Docker Support
-- CI/CD Pipeline
 - Redis Caching
+- CI/CD Pipeline
+- Microservices Architecture
 
 ---
 
@@ -260,40 +243,18 @@ Aspiring Java Backend Developer
 
 - GitHub: https://github.com/NatarajanRaja2005
 - LinkedIn: https://www.linkedin.com/in/natarajanraja2005/
-- PortFolio: https://natarajanraja2005.github.io/Natarajanportfolio/
+- Portfolio: https://natarajanraja2005.github.io/Natarajanportfolio/
 
 ---
 
 #  License
 
-This project is licensed under the MIT License.
-
-#  System Architecture
-
-<p align="center">
-    <img src="docs/SystemArchitecureDiagram.png" width="900"/>
-</p>
+This project is licensed under the **MIT License**.
 
 ---
 
-#  JWT Authentication Flow
+##  If you found this project useful, consider giving it a Star on GitHub.
 
-<p align="center">
-    <img src="docs/JwtArchitecturalDiagram.jpeg" width="900"/>
-</p>
 
----
-
-#  Entity Relationship Diagram
-
-<p align="center">
-    <img src="docs/ER Diagram.png" width="900"/>
-</p>
-
-# API Documentation
-
-The project includes interactive API documentation using Swagger OpenAPI.
-
-<p align="center">
     <img src="docs/swagger-ui.png" width="900"/>
 </p>
