@@ -65,3 +65,205 @@ This project was developed to strengthen backend development skills and demonstr
 | API Documentation | Swagger / OpenAPI |
 | Testing | Postman |
 | Version Control | Git & GitHub |
+
+
+---
+
+# System Architecture
+
+The application follows a layered architecture to ensure separation of concerns, maintainability, and scalability.
+
+                Client (Postman / Frontend)
+                          │
+                          ▼
+                 Spring Security Filter
+                          │
+                          ▼
+                   JWT Authentication
+                          │
+                          ▼
+                     REST Controllers
+                          │
+                          ▼
+                      Service Layer
+                          │
+                          ▼
+                    Repository Layer
+                          │
+                          ▼
+                         MySQL
+
+
+---
+
+#  Section 6 — Project Structure
+
+```md
+---
+
+#  Project Structure
+
+src
+├── controller
+├── service
+│   └── impl
+├── repository
+├── entity
+├── request
+├── response
+├── security
+│   ├── jwt
+│   ├── config
+│   └── user
+├── exception
+├── config
+└── SmartBazarApplication.java
+
+
+---
+
+# 🗄 Section 7 — Database Design
+
+```md
+---
+
+#  Database Design
+
+The application uses **MySQL** as the relational database.
+
+### Main Entities
+
+- User
+- Role
+- Product
+- Category
+- Cart
+- Cart Item
+- Order
+- Order Item
+- Image
+
+These entities are mapped using Spring Data JPA and Hibernate.
+
+---
+
+# JWT Authentication Flow
+
+The application uses JWT (JSON Web Token) for stateless authentication.
+
+Authentication Flow:
+
+```text
+User Login
+      │
+      ▼
+AuthenticationManager
+      │
+      ▼
+UserDetailsService
+      │
+      ▼
+JWT Token Generated
+      │
+      ▼
+Returned to Client
+      │
+      ▼
+Client sends JWT in Authorization Header
+      │
+      ▼
+JWT Filter validates Token
+      │
+      ▼
+Protected API Access
+
+
+---
+
+#  Section 9 — API Documentation
+
+```md
+---
+
+#  API Documentation
+
+The project includes interactive API documentation using Swagger OpenAPI.
+
+After starting the application, access Swagger UI at:
+
+#  Getting Started
+
+### Clone Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/smart-bazar-backend.git
+```
+
+### Navigate
+
+```bash
+cd smart-bazar-backend
+```
+
+### Configure Database
+
+Update `application.properties`
+
+```properties
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=
+
+jwt.secret=
+```
+
+### Build
+
+```bash
+mvn clean install
+```
+
+### Run
+
+```bash
+mvn spring-boot:run
+```
+
+Application starts on:
+
+```text
+http://localhost:8080
+```
+
+---
+
+#  Future Enhancements
+
+- Product Search
+- Wishlist
+- Coupon System
+- Payment Gateway Integration
+- Email Notifications
+- Product Reviews
+- Inventory Management
+- Docker Support
+- CI/CD Pipeline
+- Redis Caching
+
+---
+
+#  Author
+
+**Natarajan R**
+
+Aspiring Java Backend Developer
+
+- GitHub: https://github.com/NatarajanRaja2005
+- LinkedIn: https://www.linkedin.com/in/natarajanraja2005/
+- PortFolio: https://natarajanraja2005.github.io/Natarajanportfolio/
+
+---
+
+#  License
+
+This project is licensed under the MIT License.
