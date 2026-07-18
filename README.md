@@ -210,9 +210,9 @@ cd smart-bazar-backend
 Update `application.properties`
 
 ```properties
-spring.datasource.url=
-spring.datasource.username=
-spring.datasource.password=
+spring.datasource.url=###
+spring.datasource.username=###
+spring.datasource.password=###
 
 jwt.secret=
 ```
@@ -271,7 +271,7 @@ This project is licensed under the MIT License.
 #  System Architecture
 
 <p align="center">
-    <img src="docs/architecture.png" width="900"/>
+    <img src="docs/SystemArchitecureDiagram.png" width="900"/>
 </p>
 
 ---
@@ -279,7 +279,7 @@ This project is licensed under the MIT License.
 #  JWT Authentication Flow
 
 <p align="center">
-    <img src="docs/jwt-authentication.png" width="900"/>
+    <img src="docs/JwtArchitecturalDiagram.jpeg" width="900"/>
 </p>
 
 ---
@@ -287,7 +287,7 @@ This project is licensed under the MIT License.
 #  Entity Relationship Diagram
 
 <p align="center">
-    <img src="docs/er-diagram.png" width="900"/>
+    <img src="docs/ER Diagram.png" width="900"/>
 </p>
 
 # API Documentation
