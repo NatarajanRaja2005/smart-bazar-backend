@@ -122,7 +122,7 @@ src
 
 ---
 
-# 🗄 Section 7 — Database Design
+# Section 7 — Database Design
 
 ```md
 ---
@@ -196,7 +196,7 @@ After starting the application, access Swagger UI at:
 ### Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/smart-bazar-backend.git
+
 ```
 
 ### Navigate
