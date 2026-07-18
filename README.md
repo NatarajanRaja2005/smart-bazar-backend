@@ -267,3 +267,25 @@ Aspiring Java Backend Developer
 #  License
 
 This project is licensed under the MIT License.
+
+#  System Architecture
+
+<p align="center">
+    <img src="docs/architecture.png" width="900"/>
+</p>
+
+---
+
+#  JWT Authentication Flow
+
+<p align="center">
+    <img src="docs/jwt-authentication.png" width="900"/>
+</p>
+
+---
+
+#  Entity Relationship Diagram
+
+<p align="center">
+    <img src="docs/er-diagram.png" width="900"/>
+</p>
